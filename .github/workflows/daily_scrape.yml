@@ -1,0 +1,38 @@
+name: 全国テレビ番組表 自動取得
+
+on:
+  # 毎日 JST 5:10（= UTC 20:10）に自動実行
+  schedule:
+    - cron: "10 20 * * *"
+  # 「Actions」タブから手動でも実行できるようにする（初回テスト用）
+  workflow_dispatch: {}
+
+# リポジトリへの書き込み（結果CSVのコミット）を許可する
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v4
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 依存パッケージをインストール
+        run: pip install -r requirements.txt
+
+      - name: 番組表を取得
+        run: python scrape_tv_schedule.py
+
+      - name: 結果をコミット・プッシュ
+        run: |
+          git config user.name "tv-schedule-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet && echo "変更なし（既に本日分あり）" || git commit -m "番組表を更新: $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
