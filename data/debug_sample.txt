@@ -1,0 +1,172 @@
+===== サンプル 1 =====
+<li class="sc-past" e="202607260515" pid="5057" s="202607260445" se-id="0x1010-37940" style="top:18px;height:70px;">
+ <div class="program_time no_genre">
+  45
+ </div>
+ <a class="title_link js-logging" data-content='{"category":"event","action":"si_click","title":"ライフライン　人生最高の出会い〜私が見つけた生きる意味〜","contentsId":154479219,"programId":"5057","programDate":"20260725","timePosition":-1,"shadeFlg":0}' href="/tv_events/Al4BAQlDQAM?overwrite_area=10">
+  <div class="program_text motoyafont">
+   <p class="program_title">
+    ライフライン 人生最高の出会い〜私が見つけた生きる意味〜
+   </p>
+   <p class="program_detail">
+    牧師・千葉明徳さんに、人生を変えた出会いと人が生きる意味を伺います。
+   </p>
+  </div>
+ </a>
+ <div class="cover">
+ </div>
+</li>
+
+
+===== サンプル 2 =====
+<li class="sc-past" e="202607260545" pid="-1" s="202607260515" se-id="0x1010-37932" style="top:89px;height:63px;">
+ <div class="program_time no_genre">
+  15
+ </div>
+ <a class="title_link js-logging" data-content='{"category":"event","action":"si_click","title":"テレビショッピング","contentsId":154479229,"programId":"-1","programDate":"20260726","timePosition":-1,"shadeFlg":0}' href="/tv_events/Al4BAQlCwAM?overwrite_area=10">
+  <div class="program_text motoyafont">
+   <p class="program_title">
+    テレビショッピング
+   </p>
+   <p class="program_detail">
+    お買い得な情報満載！
+   </p>
+  </div>
+ </a>
+ <div class="cover">
+ </div>
+</li>
+
+
+===== サンプル 3 =====
+<li class="sc-past" e="202607260615" pid="11716" s="202607260545" se-id="0x1010-37964" style="top:153px;height:117px;">
+ <div class="program_time no_genre">
+  45
+ </div>
+ <a class="title_link js-logging" data-content='{"category":"event","action":"si_click","title":"日本のチカラ　ビートで輝け！〜ＤＪ介護士のロマンディスコ〜🈑","contentsId":154479235,"programId":"11716","programDate":"20260726","timePosition":-1,"shadeFlg":0}' href="/tv_events/Al4BAQlEwAM?overwrite_area=10">
+  <div class="program_text motoyafont">
+   <p class="program_title">
+    日本のチカラ ビートで輝け！〜DJ介護士のロマンディスコ〜🈑
+   </p>
+   <p class="program_detail">
+    介護福祉士の大滝亮輔さんはDJの顔も持ち、高齢者施設をディスコ会場に変える音楽イベントを開催しています。お年寄りに非日常の瞬間を提供し生きるエネルギーを届...
+   </p>
+  </div>
+ </a>
+ <div class="cover">
+ </div>
+</li>
+
+
+===== サンプル 4 =====
+<li class="sc-past" e="202607260630" pid="795764" s="202607260615" se-id="0x1010-37996" style="top:271px;height:42px;">
+ <div class="program_time no_genre">
+  15
+ </div>
+ <a class="title_link js-logging" data-content='{"category":"event","action":"si_click","title":"ハイグレードＳ","contentsId":154479237,"programId":"795764","programDate":"20260726","timePosition":-1,"shadeFlg":0}' href="/tv_events/Al4BAQlGwAM?overwrite_area=10">
+  <div class="program_text motoyafont">
+   <p class="program_title">
+    ハイグレードS
+   </p>
+   <p class="program_detail">
+    北のハイグレード食品を紹介する「ハイグレードS」商品はHBCショップで限定販売中！
+   </p>
+  </div>
+ </a>
+ <div class="cover">
+ </div>
+</li>
+
+
+===== サンプル 5 =====
+<li class="sc-past" e="202607260645" pid="921860" s="202607260630" se-id="0x1010-38004" style="top:314px;height:24px;">
+ <div class="program_time no_genre">
+  30
+ </div>
+ <a class="title_link js-logging" data-content='{"category":"event","action":"si_click","title":"ＥｚｏＤｒｉｖｅセレクション","contentsId":154479277,"programId":"921860","programDate":"20260726","timePosition":-1,"shadeFlg":0}' href="/tv_events/Al4BAQlHQAM?overwrite_area=10">
+  <div class="program_text motoyafont">
+   <p class="program_title">
+    EzoDriveセレクション
+   </p>
+   <p class="program_detail">
+    北海道のスタートアップシーンを応援する「EzoDrive」から選りすぐりのトークをお届け！創業者が語る貴重な体験談で、あなたも起業に向けた第一歩を！
+   </p>
+  </div>
+ </a>
+ <div class="cover">
+ </div>
+</li>
+
+
+===== サンプル 6 =====
+<li class="sc-past" e="202607260700" pid="857" s="202607260645" se-id="0x1010-37936" style="top:339px;height:56px;">
+ <div class="program_time no_genre">
+  45
+ </div>
+ <a class="title_link js-logging" data-content='{"category":"event","action":"si_click","title":"ＪＮＮニュース🈐","contentsId":154479287,"programId":"857","programDate":"20260726","timePosition":-1,"shadeFlg":0}' href="/tv_events/Al4BAQlDAAM?overwrite_area=10">
+  <div class="program_text motoyafont">
+   <p class="program_title">
+    JNNニュース🈐
+   </p>
+   <p class="program_detail">
+    最新のニュースをお伝えします。
+   </p>
+  </div>
+ </a>
+ <div class="cover">
+ </div>
+</li>
+
+
+===== サンプル 7 =====
+<li class="sc-past" e="202607260730" pid="33825" s="202607260700" se-id="0x1010-37952" style="top:396px;height:74px;">
+ <div class="program_time no_genre">
+  00
+ </div>
+ <a class="title_link js-logging" data-content='{"category":"event","action":"si_click","title":"健康カプセル！ゲンキの時間🈖🈑侮っていると一大事に！？消えないあざに隠れた恐怖","contentsId":154479298,"programId":"33825","programDate":"20260726","timePosition":-1,"shadeFlg":0}' href="/tv_events/Al4BAQlEAAM?overwrite_area=10">
+  <div class="vod-icon">
+   <img alt="見逃し" src="https://cdn.ggmservice.net/images/ggb/icon_vod.webp"/>
+  </div>
+  <div class="program_text motoyafont">
+   <p class="program_title">
+    健康カプセル！ゲンキの時間🈖🈑侮っていると一大事に！？消えないあざに隠れた恐怖
+   </p>
+   <p class="vod_banner">
+    見逃し
+   </p>
+   <p class="program_detail">
+    いつの間にかできては消え、気にせず過ごしがちな「あざ」。今回は、経験談をもとに、あざによる病気のサインや早期発見のヒントを専門医に教えてもらいます。
+   </p>
+  </div>
+ </a>
+ <div class="cover">
+ </div>
+</li>
+
+
+===== サンプル 8 =====
+<li class="sc-past" e="202607260800" pid="390" s="202607260730" se-id="0x1010-37916" style="top:471px;height:56px;">
+ <div class="program_time no_genre">
+  30
+ </div>
+ <a class="title_link js-logging" data-content='{"category":"event","action":"si_click","title":"がっちりマンデー‼ＣＭで良く見るけど知らない会社！渡辺パイプ、ＩＮＰＥＸ、ＮＧＫ","contentsId":154479314,"programId":"390","programDate":"20260726","timePosition":-1,"shadeFlg":0}' href="/tv_events/Al4BAQlBwAM?overwrite_area=10">
+  <div class="vod-icon">
+   <img alt="見逃し" src="https://cdn.ggmservice.net/images/ggb/icon_vod.webp"/>
+  </div>
+  <div class="program_text motoyafont">
+   <p class="program_title">
+    がっちりマンデー‼CMで良く見るけど知らない会社！渡辺パイプ、INPEX、NGK
+   </p>
+   <p class="vod_banner">
+    見逃し
+   </p>
+   <p class="program_detail">
+    🈑パイプだけじゃない！スゴすぎる国内No．1商社★エネルギーを見つけて作って届ける巨大企業！秋田の㊙油田、新潟の巨大ガス田に潜入★超高度なセラミックス技術の会社
+   </p>
+  </div>
+ </a>
+ <div class="cover">
+ </div>
+</li>
+
+
