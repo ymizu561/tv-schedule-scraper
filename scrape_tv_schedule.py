@@ -14,8 +14,14 @@
       （Macのローカルパスへの依存をなくし、launchd権限問題を解消）。
     - 実行日をJST（日本時間）基準で計算（GitHub Actionsの実行環境はUTCのため）。
  
-  データ形式（列）は元スクリプトと同一:
-    放送エリア, 放送局, 放送日, 放送時間, 番組名
+  データ形式（列）:
+    放送エリア, 放送局, 放送日, 放送時間, 番組名, 番組概要
+ 
+  番組名（p.program_title）と番組概要（p.program_detail）はサイト上で別タグに
+  分かれているため、それぞれ個別の列として保存する。
+  なお、一部の番組は放送局側が番組名欄自体に煽り文句・見出しを含めて登録している
+  ケースがあり、その場合は番組名にも付随テキストが残る（サイト側のデータ仕様のため
+  完全には除去できない）。番組名の先頭が正式名称になるので、部分一致検索で対応可能。
 """
  
 import csv
@@ -40,11 +46,6 @@ OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 REQUEST_TIMEOUT = 15  # 秒
 REQUEST_INTERVAL = 1.0  # 各エリア取得の間隔（サイトに負荷をかけすぎないため）
 MAX_RETRIES_PER_AREA = 2
- 
-# ---- デバッグ用：番組名と概要が分かれているか確認するため、
-#      最初にみつかった番組要素の生HTMLをいくつか保存する ----
-DEBUG_SAMPLE_LIMIT = 8
-DEBUG_SAMPLES: list[str] = []
  
 HEADERS = {
     "User-Agent": (
@@ -111,9 +112,9 @@ def parse_area(html: str, area_name: str, station_filter_date: str):
                 time_str = f"{start[8:10]}:{start[10:12]}"
                 title = title_tag.text.strip()
  
-                # デバッグ：番組名/概要のタグ構造を確認するため生HTMLを少数保存
-                if len(DEBUG_SAMPLES) < DEBUG_SAMPLE_LIMIT:
-                    DEBUG_SAMPLES.append(prog.prettify())
+                # 概要（番組内容）は別タグ（p.program_detail）に分かれている
+                detail_tag = prog.select_one("p.program_detail")
+                detail = detail_tag.text.strip() if detail_tag else ""
  
                 rows.append([
                     area_name,
@@ -121,6 +122,7 @@ def parse_area(html: str, area_name: str, station_filter_date: str):
                     f"{station_filter_date[:4]}-{station_filter_date[4:6]}-{station_filter_date[6:]}",
                     time_str,
                     title,
+                    detail,
                 ])
  
     return rows
@@ -159,7 +161,7 @@ def write_csv(path: str, rows: list):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8-sig", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow(["放送エリア", "放送局", "放送日", "放送時間", "番組名"])
+        writer.writerow(["放送エリア", "放送局", "放送日", "放送時間", "番組名", "番組概要"])
         writer.writerows(rows)
  
  
@@ -224,17 +226,6 @@ def main():
         # 失敗があってもワークフロー自体は失敗させない（部分成功データは活用できるため）
         print("\n⚠️ 一部エリアの取得に失敗しました。ログを確認してください。")
  
-    # デバッグ：番組名の生HTML構造をファイルに保存（番組名/概要の分離検討用）
-    if DEBUG_SAMPLES:
-        debug_path = os.path.join(OUTPUT_DIR, "debug_sample.txt")
-        os.makedirs(os.path.dirname(debug_path), exist_ok=True)
-        with open(debug_path, "w", encoding="utf-8") as f:
-            for i, sample in enumerate(DEBUG_SAMPLES, 1):
-                f.write(f"===== サンプル {i} =====\n")
-                f.write(sample)
-                f.write("\n\n")
-        print(f"\n🔍 デバッグ用サンプルを保存：{debug_path}")
- 
     print("\n完了。")
  
  
@@ -242,3 +233,4 @@ if __name__ == "__main__":
     sys.exit(main())
  
 
+ファイルを開くことができません。
