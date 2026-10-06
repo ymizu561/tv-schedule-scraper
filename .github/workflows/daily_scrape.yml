@@ -1,9 +1,9 @@
 name: 全国テレビ番組表 自動取得
 
 on:
-  # 毎日 JST 5:10（= UTC 20:10）に自動実行
+  # 毎日 JST 21:10（= UTC 12:10）に自動実行
   schedule:
-    - cron: "10 20 * * *"
+    - cron: "10 12 * * *"
   # 「Actions」タブから手動でも実行できるようにする（初回テスト用）
   workflow_dispatch: {}
 
